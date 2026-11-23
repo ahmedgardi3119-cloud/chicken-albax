@@ -18,7 +18,11 @@ const body = Poppins({
 export const metadata: Metadata = {
   title: `${SITE.name} | Crispy Fried Chicken, Burgers & Wraps in Mumbra`,
   description: SITE.description,
+  metadataBase: new URL("https://chicken-albax.vercel.app"),
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   keywords: [
+    "Chicken Albax Mumbra",
     "Chicken Albax",
     "fried chicken Mumbra",
     "fast food Mumbra",
