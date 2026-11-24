@@ -16,7 +16,8 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-brand-charcoal/95 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <a href="#top" className="flex items-center gap-2 font-display text-3xl tracking-wide" aria-label="Chicken Albax home">\n          <img src="/chicken-albax-logo.svg" alt="Chicken Albax logo" className="h-11 w-11 rounded-full object-contain" />
+        <a href="#top" className="flex items-center gap-2 font-display text-3xl tracking-wide" aria-label="Chicken Albax home">
+          <img src="/chicken-albax-logo.svg" alt="Chicken Albax logo" className="h-11 w-11 rounded-full object-contain" />
           <span className="text-brand-yellow">Chicken</span>{" "}
           <span className="text-brand-red">Albax</span>
         </a>
