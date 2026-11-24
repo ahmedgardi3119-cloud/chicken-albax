@@ -321,7 +321,7 @@ export const MENU: MenuCategory[] = [
   {
     id: "buckets",
     label: "Buckets & Starters",
-    emoji: "🪣",
+    emoji: "🍗",
     groups: [
       {
         title: "Crispy Chicken Bucket",
@@ -368,7 +368,7 @@ export const MENU: MenuCategory[] = [
   },
   {
     id: "drinks",
-    label: "Shakes & Dips",
+    label: "Shakes",
     emoji: "🥤",
     groups: [
       {
@@ -386,7 +386,9 @@ export const MENU: MenuCategory[] = [
           { name: "Roasted Hazelnut Milkshake", prices: [p(129)] },
         ],
       },
-      {
+
+    ],
+  },\n  {\n    id: "dips",\n    label: "Dips",\n    emoji: "🥣",\n    groups: [\n{
         title: "Dips & Mayo",
         items: [
           { name: "Fresh Garlic Dip", prices: [p(30)] },
@@ -396,9 +398,7 @@ export const MENU: MenuCategory[] = [
           { name: "Barbeque Dips", prices: [p(30)] },
           { name: "Red Sriracha Sauce", prices: [p(30)] },
         ],
-      },
-    ],
-  },
+      },\n    ],\n  },\n
 ];
 
 export type Highlight = {
@@ -416,5 +416,5 @@ export const HIGHLIGHTS: Highlight[] = [
   { name: "Loaded Wraps", desc: "Crispy, tandoori, peri peri, sriracha and more in veg, paneer or chicken.", from: 89, emoji: "🌯" },
   { name: "Cheesy Loaded Fries", desc: "Fries buried under melted mozzarella, chicken and peri peri.", from: 159, emoji: "🍟", tag: "Loaded" },
   { name: "Chicken Drumsticks", desc: "Hot n spicy drumsticks, crunchy outside and juicy inside.", from: 160, emoji: "🍖" },
-  { name: "Al-Baik Special Platter", desc: "25 pcs popcorn, 8 nuggets, 4 strips and medium fries. Made for sharing.", from: 559, emoji: "🪣", tag: "Special" },
+  { name: "Al-Baik Special Platter", desc: "25 pcs popcorn, 8 nuggets, 4 strips and medium fries. Made for sharing.", from: 559, emoji: "🍗", tag: "Special" },
 ];
