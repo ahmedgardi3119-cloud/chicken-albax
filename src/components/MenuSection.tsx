@@ -88,7 +88,7 @@ export default function MenuSection() {
                 </span>
               )}
               {h.name === "Al-Baik Special Platter" ? (
-                <img src="/albax-bucket.svg" alt="Black Chicken Albax bucket" className="h-20 w-24 object-contain" />
+                <img src="/albax-bucket.svg" alt="White cartoon Chicken Albax paper bucket" className="h-24 w-28 object-contain" />
               ) : (
                 <div className="text-5xl" aria-hidden>{h.emoji}</div>
               )}
