@@ -22,13 +22,13 @@ export default function Navbar() {
           className="flex min-w-0 shrink items-center gap-2"
         >
           <img
-            src="/chicken-albax-original.jpg"
+            src="/chicken-albax-circle.svg"
             alt="Chicken Albax - Original Taste"
-            width="78"
-            height="45"
-            className="h-auto w-[78px] shrink-0 object-contain sm:w-[88px]"
+            width="52"
+            height="52"
+            className="h-12 w-12 shrink-0 rounded-full object-contain sm:h-14 sm:w-14"
           />
-          <span className="whitespace-nowrap font-display text-lg tracking-wide sm:text-xl">
+          <span className="whitespace-nowrap font-display text-sm font-bold tracking-wide sm:text-lg">
             <span className="text-brand-yellow">Chicken</span>{" "}
             <span className="text-brand-red">Albax</span>
           </span>
