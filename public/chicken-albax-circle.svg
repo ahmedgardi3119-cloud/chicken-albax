@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
-  <circle cx="70" cy="70" r="66" fill="#fff" stroke="#f5b800" stroke-width="6"/>
-  <image href="/chicken-albax-original.jpg" x="8" y="35" width="124" height="70" preserveAspectRatio="xMidYMid meet"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" role="img" aria-labelledby="title">
+<title id="title">Original Chicken Albax logo in a circular badge</title>
+<defs><clipPath id="badgeClip"><circle cx="70" cy="70" r="62"/></clipPath></defs>
+<circle cx="70" cy="70" r="66" fill="#fff" stroke="#f5b800" stroke-width="7"/>
+<g clip-path="url(#badgeClip)">
+  <rect x="8" y="8" width="124" height="124" fill="#fbf8f1"/>
+  <image href="/chicken-albax-original.jpg" x="8" y="37" width="124" height="66" preserveAspectRatio="xMidYMid slice"/>
+</g>
 </svg>
