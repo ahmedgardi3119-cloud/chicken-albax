@@ -86,7 +86,12 @@ export default function MenuSection() {
                 <span className="absolute right-3 top-3 rounded-full bg-brand-yellow px-2 py-0.5 text-[10px] font-bold uppercase text-brand-charcoal">
                   {h.tag}
                 </span>
-              )}\n              {h.name === "Al-Baik Special Platter" ? (\n                <img src="/albax-bucket.svg" alt="Black Chicken Albax bucket" className="h-20 w-24 object-contain" />\n              ) : (\n                <div className="text-5xl" aria-hidden>{h.emoji}</div>\n              )}
+              )}
+              {h.name === "Al-Baik Special Platter" ? (
+                <img src="/albax-bucket.svg" alt="Black Chicken Albax bucket" className="h-20 w-24 object-contain" />
+              ) : (
+                <div className="text-5xl" aria-hidden>{h.emoji}</div>
+              )}
               <h3 className="mt-3 font-display text-2xl uppercase tracking-wide">
                 {h.name}
               </h3>
