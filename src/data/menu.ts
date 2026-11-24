@@ -388,7 +388,13 @@ export const MENU: MenuCategory[] = [
       },
 
     ],
-  },\n  {\n    id: "dips",\n    label: "Dips",\n    emoji: "🥣",\n    groups: [\n{
+  },
+  {
+    id: "dips",
+    label: "Dips",
+    emoji: "🥣",
+    groups: [
+{
         title: "Dips & Mayo",
         items: [
           { name: "Fresh Garlic Dip", prices: [p(30)] },
@@ -398,7 +404,10 @@ export const MENU: MenuCategory[] = [
           { name: "Barbeque Dips", prices: [p(30)] },
           { name: "Red Sriracha Sauce", prices: [p(30)] },
         ],
-      },\n    ],\n  },\n
+      },
+    ],
+  },
+
 ];
 
 export type Highlight = {
