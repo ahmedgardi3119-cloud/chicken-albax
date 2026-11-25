@@ -63,17 +63,17 @@ Most visitors will arrive on a **mobile phone, on a mobile data connection**, so
 - Online cart and payments.
 - Customer accounts and loyalty program.
 - CMS or admin panel for menu edits.
-- Real food photography (placeholders and emoji are used in v1.0).
+- Real food photography (emoji and a logo-branded black paper bucket illustration are used in v1.0).
 
 ## 6. Functional Requirements
 
 | ID | Requirement | Priority |
 |---|---|---|
-| F1 | Navbar with brand, anchor links (Menu, About, Contact) and Order Now button; collapses to a hamburger on mobile | Must |
+| F1 | Navbar with logo and brand name, anchor links (Menu, About, Contact) and Order Now button; collapses to a hamburger on mobile | Must |
 | F2 | Hero with headline, short pitch, Order Now (`tel:`) and View Menu CTAs, hours and delivery info | Must |
 | F3 | Open / Closed badge computed in Asia/Kolkata time (open 16:00–24:00) | Should |
 | F4 | Menu Highlights grid of 7 signature items with starting prices | Must |
-| F5 | Full menu in 10 categories with tab navigation, size / quantity price variants, veg markers and badges | Must |
+| F5 | Full menu in 11 categories (Shakes & Mocktails and Dips & Mayo are separate tabs) with tab navigation, size / quantity price variants, veg markers and badges | Must |
 | F6 | About section with story, address, hours, price range, delivery | Must |
 | F7 | Contact section with phone, WhatsApp, Instagram, email, address and map | Must |
 | F8 | Footer with brand, address, phone, Instagram, copyright, sticky mobile call bar | Must |

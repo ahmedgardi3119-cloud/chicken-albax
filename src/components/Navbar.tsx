@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, Phone, X } from "lucide-react";
 import { SITE } from "@/data/site";
 
@@ -16,9 +17,23 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-brand-charcoal/95 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <a href="#top" className="font-display text-3xl tracking-wide">
-          <span className="text-brand-yellow">Chicken</span>{" "}
-          <span className="text-brand-red">Albax</span>
+        <a
+          href="#top"
+          aria-label="Chicken Albax home"
+          className="flex items-center gap-2.5 font-display text-3xl tracking-wide"
+        >
+          <Image
+            src="/logo-mark.webp"
+            alt=""
+            width={44}
+            height={44}
+            priority
+            className="h-11 w-11 rounded-lg"
+          />
+          <span>
+            <span className="text-brand-yellow">Chicken</span>{" "}
+            <span className="text-brand-red">Albax</span>
+          </span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">

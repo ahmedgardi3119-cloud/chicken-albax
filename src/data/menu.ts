@@ -7,6 +7,7 @@ export type MenuItem = {
   veg?: boolean;
   isNew?: boolean;
   best?: boolean;
+  recommended?: boolean;
 };
 
 export type MenuGroup = { title?: string; items: MenuItem[] };
@@ -17,6 +18,8 @@ export type MenuCategory = {
   emoji: string;
   groups: MenuGroup[];
   footnote?: string;
+  /** hide the veg / non-veg dot (drinks and dips are not marked on the printed menu) */
+  hideDiet?: boolean;
 };
 
 const p = (amount: number, label?: string): Price => ({ amount, label });
@@ -53,7 +56,6 @@ export const MENU: MenuCategory[] = [
             name: "Al-Baik Special Platter",
             note: "25 pcs chicken popcorn + 8 pcs nuggets + 4 pcs chicken strips + medium french fries",
             prices: [p(559)],
-            best: true,
           },
         ],
       },
@@ -86,7 +88,7 @@ export const MENU: MenuCategory[] = [
           { name: "Spicy Chicken Burger", prices: [p(150)] },
           { name: "Harissa Chicken Burger", prices: [p(170)], isNew: true },
           { name: "Korean Crispy Chicken Burger", prices: [p(170)], isNew: true },
-          { name: "Al-Baik Special Burger", prices: [p(180)], best: true },
+          { name: "Al-Baik Special Burger", prices: [p(180)] },
           { name: "Chicken Double Trouble Burger", prices: [p(200)] },
           { name: "Al-Baik Fish Burger", prices: [p(220)] },
         ],
@@ -174,7 +176,6 @@ export const MENU: MenuCategory[] = [
             name: "Chicken Cheeza",
             note: "No pizza base, only chicken: crispy chicken patty, onion, capsicum, olive, jalapeno, melted cheese",
             prices: pieces("2 pc", 250, "4 pc", 490),
-            best: true,
           },
         ],
       },
@@ -233,7 +234,7 @@ export const MENU: MenuCategory[] = [
           { name: "Peri Peri Cheesy Fries", prices: sml(109, 149, 229) },
           { name: "Veg Cheesy Loaded Fries", note: "Melted mozzarella cheese", prices: ml(159, 239), veg: true },
           { name: "Chicken Cheesy Fries", prices: ml(169, 249) },
-          { name: "Chicken Cheesy Loaded", note: "Melted mozzarella cheese", prices: ml(259, 359), best: true },
+          { name: "Chicken Cheesy Loaded", note: "Melted mozzarella cheese", prices: ml(259, 359) },
           { name: "Potato Wedges", prices: ml(120, 220) },
           { name: "Peri Peri Wedges", prices: ml(130, 230) },
           { name: "Cheesy Wedges", prices: ml(150, 250) },
@@ -307,7 +308,7 @@ export const MENU: MenuCategory[] = [
             name: "Family Meal",
             note: "1 chicken crispy pizza, 1 zinger wrap, 1 chicken peri peri burger, 4 pcs chicken strips, 4 pcs lollipop, 4 pcs nuggets, garlic & sriracha dips, peri peri medium fries, 4 cold drinks",
             prices: [p(999)],
-            best: true,
+            recommended: true,
           },
           {
             name: "Party Meal",
@@ -321,7 +322,7 @@ export const MENU: MenuCategory[] = [
   {
     id: "buckets",
     label: "Buckets & Starters",
-    emoji: "🪣",
+    emoji: "bucket",
     groups: [
       {
         title: "Crispy Chicken Bucket",
@@ -367,12 +368,12 @@ export const MENU: MenuCategory[] = [
     ],
   },
   {
-    id: "drinks",
-    label: "Shakes & Dips",
+    id: "shakes",
+    label: "Shakes & Mocktails",
     emoji: "🥤",
+    hideDiet: true,
     groups: [
       {
-        title: "Shakes & Mocktails",
         items: [
           { name: "Sweet Lime Soda", prices: [p(49)] },
           { name: "Mint Lime Mojito", prices: [p(79)] },
@@ -386,8 +387,15 @@ export const MENU: MenuCategory[] = [
           { name: "Roasted Hazelnut Milkshake", prices: [p(129)] },
         ],
       },
+    ],
+  },
+  {
+    id: "dips",
+    label: "Dips & Mayo",
+    emoji: "🥣",
+    hideDiet: true,
+    groups: [
       {
-        title: "Dips & Mayo",
         items: [
           { name: "Fresh Garlic Dip", prices: [p(30)] },
           { name: "Yellow / White Cheesy Dip", prices: [p(30)] },
@@ -416,5 +424,5 @@ export const HIGHLIGHTS: Highlight[] = [
   { name: "Loaded Wraps", desc: "Crispy, tandoori, peri peri, sriracha and more in veg, paneer or chicken.", from: 89, emoji: "🌯" },
   { name: "Cheesy Loaded Fries", desc: "Fries buried under melted mozzarella, chicken and peri peri.", from: 159, emoji: "🍟", tag: "Loaded" },
   { name: "Chicken Drumsticks", desc: "Hot n spicy drumsticks, crunchy outside and juicy inside.", from: 160, emoji: "🍖" },
-  { name: "Al-Baik Special Platter", desc: "25 pcs popcorn, 8 nuggets, 4 strips and medium fries. Made for sharing.", from: 559, emoji: "🪣", tag: "Special" },
+  { name: "Al-Baik Special Platter", desc: "25 pcs popcorn, 8 nuggets, 4 strips and medium fries. Made for sharing.", from: 559, emoji: "bucket", tag: "Special" },
 ];

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Flame, Sparkles } from "lucide-react";
+import { Flame, Sparkles, Star } from "lucide-react";
 import { HIGHLIGHTS, MENU, type MenuItem } from "@/data/menu";
+import BucketIcon from "./BucketIcon";
 
 function VegDot({ veg }: { veg?: boolean }) {
   return (
@@ -22,10 +23,10 @@ function VegDot({ veg }: { veg?: boolean }) {
   );
 }
 
-function Row({ item }: { item: MenuItem }) {
+function Row({ item, showDiet }: { item: MenuItem; showDiet: boolean }) {
   return (
     <li className="flex items-start gap-3 rounded-xl bg-white/5 p-4">
-      <VegDot veg={item.veg} />
+      {showDiet && <VegDot veg={item.veg} />}
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-2">
           <h4 className="font-semibold text-white">{item.name}</h4>
@@ -37,6 +38,11 @@ function Row({ item }: { item: MenuItem }) {
           {item.best && (
             <span className="inline-flex items-center gap-1 rounded bg-brand-red px-1.5 py-0.5 text-[10px] font-bold uppercase text-white">
               <Flame size={10} /> Best seller
+            </span>
+          )}
+          {item.recommended && (
+            <span className="inline-flex items-center gap-1 rounded bg-brand-red px-1.5 py-0.5 text-[10px] font-bold uppercase text-white">
+              <Star size={10} /> Recommended
             </span>
           )}
         </div>
@@ -87,8 +93,12 @@ export default function MenuSection() {
                   {h.tag}
                 </span>
               )}
-              <div className="text-5xl" aria-hidden>
-                {h.emoji}
+              <div className="flex min-h-[3.5rem] items-center text-5xl" aria-hidden>
+                {h.emoji === "bucket" ? (
+                  <BucketIcon className="h-20 w-auto" />
+                ) : (
+                  h.emoji
+                )}
               </div>
               <h3 className="mt-3 font-display text-2xl uppercase tracking-wide">
                 {h.name}
@@ -119,15 +129,19 @@ export default function MenuSection() {
               role="tab"
               aria-selected={active === c.id}
               onClick={() => setActive(c.id)}
-              className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition ${
+              className={`inline-flex shrink-0 items-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-semibold transition ${
                 active === c.id
                   ? "bg-brand-yellow text-brand-charcoal"
                   : "bg-white/10 text-white hover:bg-white/20"
               }`}
             >
-              <span className="mr-1" aria-hidden>
-                {c.emoji}
-              </span>
+              {c.emoji === "bucket" ? (
+                <BucketIcon className="-my-1 mr-1.5 h-7 w-auto" />
+              ) : (
+                <span className="mr-1" aria-hidden>
+                  {c.emoji}
+                </span>
+              )}
               {c.label}
             </button>
           ))}
@@ -143,7 +157,11 @@ export default function MenuSection() {
               )}
               <ul className="grid gap-3 md:grid-cols-2">
                 {g.items.map((item) => (
-                  <Row key={item.name} item={item} />
+                  <Row
+                    key={item.name}
+                    item={item}
+                    showDiet={!category.hideDiet}
+                  />
                 ))}
               </ul>
             </div>

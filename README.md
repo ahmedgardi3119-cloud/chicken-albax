@@ -12,7 +12,7 @@ Official website for **Chicken Albax**, a fast-food restaurant in Mumbra, Thane 
 - Mobile-first, fully responsive design in red / yellow / charcoal
 - Hero with **Order Now** (tap-to-call) and **View Menu** CTAs
 - Live Open / Closed badge (IST)
-- Menu highlights grid and full tabbed menu with veg markers
+- Menu highlights grid and full tabbed menu (11 categories) with veg markers
 - About, hours and address section
 - Contact section with WhatsApp, Instagram, email and embedded Google Map
 - SEO metadata and schema.org structured data
@@ -30,17 +30,22 @@ Official website for **Chicken Albax**, a fast-food restaurant in Mumbra, Thane 
 ```text
 chicken-albax/
 ├── public/
+│   ├── logo.webp        # full Chicken Albax logo
+│   └── logo-mark.webp   # rooster emblem used in the navbar
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx
 │   │   ├── page.tsx
 │   │   ├── globals.css
-│   │   └── icon.svg
+│   │   ├── icon.svg
+│   │   ├── robots.ts
+│   │   └── sitemap.ts
 │   ├── components/
 │   │   ├── Navbar.tsx
 │   │   ├── Hero.tsx
 │   │   ├── OpenStatus.tsx
 │   │   ├── MenuSection.tsx
+│   │   ├── BucketIcon.tsx   # black paper bucket with the logo
 │   │   ├── About.tsx
 │   │   ├── Contact.tsx
 │   │   └── Footer.tsx
@@ -87,6 +92,7 @@ npm start
 
 - Phone, address, hours, social links: `src/data/site.ts`
 - Menu items and prices: `src/data/menu.ts`
+- Logo: replace `public/logo.webp` (full logo, 240 px wide) and `public/logo-mark.webp` (square emblem, 96 px)
 
 ## Deployment on Vercel
 
