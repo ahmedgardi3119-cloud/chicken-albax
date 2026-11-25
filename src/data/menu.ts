@@ -223,7 +223,8 @@ export const MENU: MenuCategory[] = [
     id: "fries",
     label: "Friend's Fries",
     emoji: "🍟",
-    footnote: "Loaded and wedge items are available in Medium and Large.",
+    footnote:
+      "Veg Cheesy Loaded, Chicken Cheesy Fries, Chicken Cheesy Loaded and all wedges are available in Medium and Large only.",
     groups: [
       {
         items: [
@@ -294,7 +295,7 @@ export const MENU: MenuCategory[] = [
         title: "Meal Box",
         items: [
           { name: "Kids Meal", note: "Small fries, crispy chicken burger, cold drink", prices: [p(169)] },
-          { name: "Budget Meal", note: "Crispy burger, 2 pc lollipop + 2 pc nuggets, garlic dip & cold drink", prices: [p(229)] },
+          { name: "Budget Meal", note: "Crispy burger, 2 pc lollipop + 2 pc nuggets, garlic dips & cold drink", prices: [p(229)] },
           { name: "Crispy Meal", note: "Crispy burger, chicken popcorn 10 pcs, small fries + cold drink", prices: [p(249)], best: true },
           { name: "Zinger Meal", note: "Zinger burger, chicken nuggets (4 pcs), small fries + cold drink", prices: [p(259)], best: true },
           { name: "Regular Meal", note: "4 pc wings, 2 pc lollipop, 4 pc nuggets, small fries, garlic & sriracha dips, cold drink", prices: [p(399)], best: true },
@@ -312,7 +313,7 @@ export const MENU: MenuCategory[] = [
           },
           {
             name: "Party Meal",
-            note: "1 chicken crispy pizza, 2 zinger burgers, 2 full chicken popcorn, 8 pcs nuggets, 4 pc strips, 4 pc lollipop, 4 pc wings, 2 pc hot n spicy drumsticks, large fries, dips, 6 cold drinks",
+            note: "1 chicken crispy pizza, 2 zinger burgers, 2 full chicken popcorn, 8 pcs nuggets, 4 pc strips, 4 pc lollipop, 4 pc wings, 2 pc hot n spicy drumsticks, large fries, fresh garlic & sriracha dips, 6 cold drinks",
             prices: [p(1549)],
           },
         ],

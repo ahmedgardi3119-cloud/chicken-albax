@@ -36,7 +36,7 @@ chicken-albax/
 │   │   ├── layout.tsx
 │   │   ├── page.tsx
 │   │   ├── globals.css
-│   │   ├── icon.svg
+│   │   ├── icon.png         # favicon (chicken mascot from the logo)
 │   │   ├── robots.ts
 │   │   └── sitemap.ts
 │   ├── components/
@@ -92,7 +92,7 @@ npm start
 
 - Phone, address, hours, social links: `src/data/site.ts`
 - Menu items and prices: `src/data/menu.ts`
-- Logo: replace `public/logo.webp` (full logo, about 240 px wide). It is used in the navbar badge and on the bucket.
+- Logo: replace `public/logo.webp` (full logo, about 240 px wide). It is used in the navbar badge and on the bucket. The favicon is `src/app/icon.png`.
 
 ## Deployment on Vercel
 
