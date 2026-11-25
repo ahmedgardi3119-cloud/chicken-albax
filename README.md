@@ -30,8 +30,7 @@ Official website for **Chicken Albax**, a fast-food restaurant in Mumbra, Thane 
 ```text
 chicken-albax/
 ├── public/
-│   ├── logo.webp        # full Chicken Albax logo
-│   └── logo-mark.webp   # rooster emblem used in the navbar
+│   └── logo.webp        # full Chicken Albax logo (navbar badge and bucket)
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx
@@ -46,6 +45,7 @@ chicken-albax/
 │   │   ├── OpenStatus.tsx
 │   │   ├── MenuSection.tsx
 │   │   ├── BucketIcon.tsx   # black paper bucket with the logo
+│   │   ├── LogoBadge.tsx    # circular logo badge in the navbar
 │   │   ├── About.tsx
 │   │   ├── Contact.tsx
 │   │   └── Footer.tsx
@@ -92,7 +92,7 @@ npm start
 
 - Phone, address, hours, social links: `src/data/site.ts`
 - Menu items and prices: `src/data/menu.ts`
-- Logo: replace `public/logo.webp` (full logo, 240 px wide) and `public/logo-mark.webp` (square emblem, 96 px)
+- Logo: replace `public/logo.webp` (full logo, about 240 px wide). It is used in the navbar badge and on the bucket.
 
 ## Deployment on Vercel
 

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Menu, Phone, X } from "lucide-react";
 import { SITE } from "@/data/site";
+import LogoBadge from "./LogoBadge";
 
 const LINKS = [
   { href: "#menu", label: "Menu" },
@@ -16,21 +16,14 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-brand-charcoal/95 backdrop-blur">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 overflow-hidden px-3 sm:px-4">
         <a
           href="#top"
           aria-label="Chicken Albax home"
-          className="flex items-center gap-2.5 font-display text-3xl tracking-wide"
+          className="flex min-w-0 shrink items-center gap-2"
         >
-          <Image
-            src="/logo-mark.webp"
-            alt=""
-            width={44}
-            height={44}
-            priority
-            className="h-11 w-11 rounded-lg"
-          />
-          <span>
+          <LogoBadge className="h-12 w-12 shrink-0 sm:h-14 sm:w-14" />
+          <span className="whitespace-nowrap font-display text-2xl tracking-wide sm:text-3xl">
             <span className="text-brand-yellow">Chicken</span>{" "}
             <span className="text-brand-red">Albax</span>
           </span>
@@ -59,7 +52,7 @@ export default function Navbar() {
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="rounded-md p-2 text-white md:hidden"
+          className="shrink-0 rounded-md p-2 text-white md:hidden"
         >
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
@@ -80,10 +73,7 @@ export default function Navbar() {
               </li>
             ))}
             <li className="pt-2">
-              <a
-                href={`tel:${SITE.phoneTel}`}
-                className="btn btn-yellow w-full"
-              >
+              <a href={`tel:${SITE.phoneTel}`} className="btn btn-yellow w-full">
                 <Phone size={16} /> Order Now: {SITE.phoneDisplay}
               </a>
             </li>
