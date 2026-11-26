@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Instagram, Phone } from "lucide-react";
 import { SITE } from "@/data/site";
 
@@ -5,10 +6,13 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-black pb-24 pt-10 sm:pb-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 text-center">
-        <p className="font-display text-3xl tracking-wide">
-          <span className="text-brand-yellow">Chicken</span>{" "}
-          <span className="text-brand-red">Albax</span>
-        </p>
+        <Image
+          src="/logo-full.webp"
+          alt="Chicken Albax - Original Taste"
+          width={800}
+          height={437}
+          className="h-24 w-auto sm:h-28"
+        />
         <p className="text-sm text-white/60">{SITE.tagline}</p>
         <p className="max-w-xl text-xs text-white/50">
           {SITE.addressOneLine}
