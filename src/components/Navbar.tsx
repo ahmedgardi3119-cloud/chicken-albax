@@ -25,8 +25,8 @@ export default function Navbar() {
           <Image
             src="/logo-full.webp"
             alt="Chicken Albax - Original Taste"
-            width={764}
-            height={443}
+            width={800}
+            height={437}
             priority
             className="h-14 w-auto shrink-0 sm:h-16"
           />
