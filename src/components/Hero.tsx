@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Clock, MapPin, Phone, Truck } from "lucide-react";
 import { SITE } from "@/data/site";
 import OpenStatus from "./OpenStatus";
@@ -60,9 +61,14 @@ export default function Hero() {
         <div className="relative mx-auto flex aspect-square w-full max-w-sm items-center justify-center">
           <div className="absolute inset-0 rounded-full bg-brand-yellow shadow-card" />
           <div className="absolute inset-4 rounded-full border-4 border-dashed border-brand-red/40" />
-          <span className="relative text-[9rem] leading-none sm:text-[11rem]" role="img" aria-label="Fried chicken">
-            🍗
-          </span>
+          <Image
+            src="/mascot.webp"
+            alt="Chicken Albax mascot"
+            width={289}
+            height={384}
+            priority
+            className="relative h-60 w-auto drop-shadow-[0_8px_12px_rgba(0,0,0,0.25)] sm:h-72"
+          />
           <span className="absolute left-2 top-6 text-5xl sm:text-6xl" aria-hidden>🍔</span>
           <span className="absolute bottom-6 right-2 text-5xl sm:text-6xl" aria-hidden>🍟</span>
           <span className="absolute -bottom-2 left-6 text-4xl sm:text-5xl" aria-hidden>🌯</span>

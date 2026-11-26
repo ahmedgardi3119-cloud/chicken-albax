@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, Phone, X } from "lucide-react";
 import { SITE } from "@/data/site";
 import LogoBadge from "./LogoBadge";
@@ -23,10 +24,14 @@ export default function Navbar() {
           className="flex min-w-0 shrink items-center gap-2"
         >
           <LogoBadge className="h-12 w-12 shrink-0 sm:h-14 sm:w-14" />
-          <span className="whitespace-nowrap font-display text-2xl tracking-wide sm:text-3xl">
-            <span className="text-brand-yellow">Chicken</span>{" "}
-            <span className="text-brand-red">Albax</span>
-          </span>
+          <Image
+            src="/wordmark.webp"
+            alt="Chicken Albax"
+            width={447}
+            height={266}
+            priority
+            className="h-12 w-auto shrink-0 sm:h-14"
+          />
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
