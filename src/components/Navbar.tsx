@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { Menu, Phone, X } from "lucide-react";
 import { SITE } from "@/data/site";
-import LogoBadge from "./LogoBadge";
 
 const LINKS = [
   { href: "#menu", label: "Menu" },
@@ -17,20 +16,19 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-brand-charcoal/95 backdrop-blur">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 overflow-hidden px-3 sm:px-4">
+      <nav className="mx-auto flex h-[72px] sm:h-20 max-w-6xl items-center justify-between gap-3 overflow-hidden px-3 sm:px-4">
         <a
           href="#top"
           aria-label="Chicken Albax home"
           className="flex min-w-0 shrink items-center gap-2"
         >
-          <LogoBadge className="h-12 w-12 shrink-0 sm:h-14 sm:w-14" />
           <Image
-            src="/wordmark.webp"
-            alt="Chicken Albax"
-            width={447}
-            height={266}
+            src="/logo-full.webp"
+            alt="Chicken Albax - Original Taste"
+            width={737}
+            height={419}
             priority
-            className="h-12 w-auto shrink-0 sm:h-14"
+            className="h-14 w-auto shrink-0 sm:h-16"
           />
         </a>
 
