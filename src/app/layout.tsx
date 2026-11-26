@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   description: SITE.description,
   metadataBase: new URL("https://chicken-albax.vercel.app"),
   alternates: { canonical: "/" },
+  verification: {
+    google: "ijI2dGum0uld81gX4kWnBSm0ld3M6J_nGJ_JHBQMxfk",
+  },
   robots: { index: true, follow: true },
   keywords: [
     "Chicken Albax Mumbra",
