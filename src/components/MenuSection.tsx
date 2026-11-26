@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Flame, Sparkles, Star } from "lucide-react";
 import { HIGHLIGHTS, MENU, type MenuItem } from "@/data/menu";
 import BucketIcon from "./BucketIcon";
@@ -94,7 +95,15 @@ export default function MenuSection() {
                 </span>
               )}
               <div className="flex min-h-[3.5rem] items-center text-5xl" aria-hidden>
-                {h.emoji === "bucket" ? (
+                {h.emoji === "platter" ? (
+                  <Image
+                    src="/platter.webp"
+                    alt="Al-Baik Special Platter: popcorn, nuggets, strips, fries and two dips"
+                    width={760}
+                    height={603}
+                    className="h-28 w-auto drop-shadow-[0_6px_8px_rgba(0,0,0,0.3)]"
+                  />
+                ) : h.emoji === "bucket" ? (
                   <BucketIcon className="h-20 w-auto" />
                 ) : (
                   h.emoji

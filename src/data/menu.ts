@@ -425,5 +425,5 @@ export const HIGHLIGHTS: Highlight[] = [
   { name: "Loaded Wraps", desc: "Crispy, tandoori, peri peri, sriracha and more in veg, paneer or chicken.", from: 89, emoji: "🌯" },
   { name: "Cheesy Loaded Fries", desc: "Fries buried under melted mozzarella, chicken and peri peri.", from: 159, emoji: "🍟", tag: "Loaded" },
   { name: "Chicken Drumsticks", desc: "Hot n spicy drumsticks, crunchy outside and juicy inside.", from: 160, emoji: "🍖" },
-  { name: "Al-Baik Special Platter", desc: "25 pcs popcorn, 8 nuggets, 4 strips and medium fries. Made for sharing.", from: 559, emoji: "bucket", tag: "Special" },
+  { name: "Al-Baik Special Platter", desc: "25 pcs popcorn, 8 nuggets, 4 strips and medium fries. Made for sharing.", from: 559, emoji: "platter", tag: "Special" },
 ];
