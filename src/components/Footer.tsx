@@ -9,8 +9,8 @@ export default function Footer() {
         <Image
           src="/logo-full.webp"
           alt="Chicken Albax - Original Taste"
-          width={800}
-          height={437}
+          width={463}
+          height={264}
           className="h-24 w-auto sm:h-28"
         />
         <p className="text-sm text-white/60">{SITE.tagline}</p>
