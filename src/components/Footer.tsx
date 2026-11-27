@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Instagram, Phone } from "lucide-react";
 import { SITE } from "@/data/site";
 
@@ -6,11 +5,12 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-black pb-24 pt-10 sm:pb-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 text-center">
-        <Image
-          src="/logo-full.webp"
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo-vector.svg"
           alt="Chicken Albax - Original Taste"
-          width={800}
-          height={437}
+          width={451}
+          height={251}
           className="h-24 w-auto sm:h-28"
         />
         <p className="text-sm text-white/60">{SITE.tagline}</p>

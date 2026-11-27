@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Menu, Phone, X } from "lucide-react";
 import { SITE } from "@/data/site";
 
@@ -22,12 +21,12 @@ export default function Navbar() {
           aria-label="Chicken Albax home"
           className="flex min-w-0 shrink items-center gap-2"
         >
-          <Image
-            src="/logo-full.webp"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-vector.svg"
             alt="Chicken Albax - Original Taste"
-            width={800}
-            height={437}
-            priority
+            width={451}
+            height={251}
             className="h-14 w-auto shrink-0 sm:h-16"
           />
         </a>
