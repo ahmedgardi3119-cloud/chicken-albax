@@ -103,6 +103,14 @@ export default function MenuSection() {
                     height={371}
                     className="h-28 w-auto drop-shadow-[0_6px_8px_rgba(0,0,0,0.3)]"
                   />
+                ) : h.emoji === "burger" ? (
+                  <Image
+                    src="/burger.webp"
+                    alt="Crispy chicken burger"
+                    width={600}
+                    height={609}
+                    className="h-20 w-auto drop-shadow-[0_6px_8px_rgba(0,0,0,0.3)]"
+                  />
                 ) : h.emoji === "bucket" ? (
                   <BucketIcon className="h-20 w-auto" />
                 ) : (
@@ -146,6 +154,14 @@ export default function MenuSection() {
             >
               {c.emoji === "bucket" ? (
                 <BucketIcon className="-my-1 mr-1.5 h-7 w-auto" />
+              ) : c.emoji === "burger" ? (
+                <Image
+                  src="/burger.webp"
+                  alt=""
+                  width={600}
+                  height={609}
+                  className="-my-1 mr-1.5 h-7 w-auto"
+                />
               ) : (
                 <span className="mr-1" aria-hidden>
                   {c.emoji}

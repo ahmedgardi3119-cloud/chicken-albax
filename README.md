@@ -33,6 +33,7 @@ chicken-albax/
 │   ├── logo.webp        # full Chicken Albax logo (navbar badge and bucket)
 │   ├── logo-full.webp   # full logo, transparent background (navbar and footer)
 │   ├── platter.webp     # Al-Baik Special Platter photo, transparent background
+│   ├── burger.webp      # crispy chicken burger photo, transparent background
 │   └── mascot.webp      # chicken mascot cut-out (hero yellow circle)
 ├── src/
 │   ├── app/

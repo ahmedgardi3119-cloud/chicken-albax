@@ -64,7 +64,7 @@ export const MENU: MenuCategory[] = [
   {
     id: "burgers",
     label: "Burgers",
-    emoji: "🍔",
+    emoji: "burger",
     groups: [
       {
         title: "Veg Burgers",
@@ -421,7 +421,7 @@ export type Highlight = {
 export const HIGHLIGHTS: Highlight[] = [
   { name: "Crispy Fried Chicken", desc: "Golden broast, wings, strips and popcorn fried fresh in store.", from: 85, emoji: "🍗", tag: "Signature" },
   { name: "Chicken Cheeza", desc: "No pizza base. Crispy chicken patty topped with veggies and melted cheese.", from: 250, emoji: "🍕", tag: "Chizza" },
-  { name: "Zinger & Crispy Burgers", desc: "From the classic crispy burger to the Al-Baik Special and Korean crispy.", from: 99, emoji: "🍔", tag: "Fan favourite" },
+  { name: "Zinger & Crispy Burgers", desc: "From the classic crispy burger to the Al-Baik Special and Korean crispy.", from: 99, emoji: "burger", tag: "Fan favourite" },
   { name: "Loaded Wraps", desc: "Crispy, tandoori, peri peri, sriracha and more in veg, paneer or chicken.", from: 89, emoji: "🌯" },
   { name: "Cheesy Loaded Fries", desc: "Fries buried under melted mozzarella, chicken and peri peri.", from: 159, emoji: "🍟", tag: "Loaded" },
   { name: "Chicken Drumsticks", desc: "Hot n spicy drumsticks, crunchy outside and juicy inside.", from: 160, emoji: "🍖" },

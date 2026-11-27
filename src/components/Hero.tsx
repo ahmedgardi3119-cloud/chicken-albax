@@ -69,7 +69,14 @@ export default function Hero() {
             priority
             className="relative h-60 w-auto drop-shadow-[0_8px_12px_rgba(0,0,0,0.25)] sm:h-72"
           />
-          <span className="absolute left-2 top-6 text-5xl sm:text-6xl" aria-hidden>🍔</span>
+          <Image
+            src="/burger.webp"
+            alt=""
+            width={600}
+            height={609}
+            aria-hidden
+            className="absolute left-0 top-4 h-16 w-auto drop-shadow-[0_6px_8px_rgba(0,0,0,0.3)] sm:h-20"
+          />
           <span className="absolute bottom-6 right-2 text-5xl sm:text-6xl" aria-hidden>🍟</span>
           <span className="absolute -bottom-2 left-6 text-4xl sm:text-5xl" aria-hidden>🌯</span>
         </div>
