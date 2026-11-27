@@ -99,8 +99,8 @@ export default function MenuSection() {
                   <Image
                     src="/platter.webp"
                     alt="Al-Baik Special Platter: popcorn, nuggets, strips, fries and two dips"
-                    width={760}
-                    height={603}
+                    width={467}
+                    height={371}
                     className="h-28 w-auto drop-shadow-[0_6px_8px_rgba(0,0,0,0.3)]"
                   />
                 ) : h.emoji === "bucket" ? (
