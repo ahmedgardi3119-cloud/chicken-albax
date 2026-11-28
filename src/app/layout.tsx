@@ -85,6 +85,14 @@ const jsonLd = {
   sameAs: [SITE.instagram],
 };
 
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Chicken Albax",
+  alternateName: ["Chicken Albax Mumbra"],
+  url: "https://chicken-albax.vercel.app/",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -96,6 +104,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
         />
         {children}
       </body>
